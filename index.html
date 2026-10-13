@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Type Conversion</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 12px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            color: #166534;
+            font-weight: bold;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>JavaScript Type Conversion</h2>
+
+        <label>Enter a number:</label>
+        <br>
+
+        <input type="text" id="userInput" value="25">
+
+        <br>
+
+        <button onclick="convertType()">Convert</button>
+
+        <p id="result">Results will appear here.</p>
+    </div>
+
+    <script>
+        function convertType() {
+
+            // Get the input as a string
+            let value = document.getElementById("userInput").value;
+
+            // Convert string to number
+            let numberValue = Number(value);
+
+            // Convert number to string
+            let stringValue = String(numberValue);
+
+            // Convert value to boolean
+            let booleanValue = Boolean(numberValue);
+
+            document.getElementById("result").textContent =
+                "Original value: " + value +
+                "\nOriginal type: " + typeof value +
+                "\nNumber value: " + numberValue +
+                "\nNumber type: " + typeof numberValue +
+                "\nString value: " + stringValue +
+                "\nString type: " + typeof stringValue +
+                "\nBoolean value: " + booleanValue;
+        }
+    </script>
+
+</body>
+</html>
